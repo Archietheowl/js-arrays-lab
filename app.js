@@ -51,18 +51,12 @@ const favFood = foods[1]
 console.log('Exercise 4 result:', favFood);
 
 
-
-
 //SPLICE SYNTAX
 // splice(start) where are we starting the splice
-// splice(start, deleteCount) how many items are we deleting with the splace if nothing use 0
+// splice(start, deleteCount) how many items are we deleting with the splice if nothing use 0
 // splice(start, deleteCount, item0) add the item
 // splice(start, deleteCount, item0, item1)
 // splice(start, deleteCount, item0, item1, /* …, */ itemN)
-
-
-
-
 
 
 /*
@@ -207,12 +201,15 @@ const fizzbuzz = []
 
 
 nums.forEach((number) => {
-    if ((number) % 3 === 0) {
-        fizz.push(number)};
-    if ((number) % 5 === 0) {
-        buzz.push(number)};
-    if ((number) % 3 === 0 && ((number) % 5 === 0)) {
-        fizzbuzz.push(number)};
+    if ((number) % 3 === 0) 
+      { fizz.push(number)
+      };
+    if ((number) % 5 === 0) 
+      { buzz.push(number)
+      };
+    if ((number) % 3 === 0 && ((number) % 5 === 0)) 
+      { fizzbuzz.push(number)
+      };
     })
 console.log('Exercise 12 Results:');
 console.log('  fizz:', fizz);
@@ -237,15 +234,16 @@ const numArrays = [
     [45, 66],
     [7, 81, 90]
 ];
-let lastArr = 0
-lastArr = numArrays.length;
-const numList = numArrays.slice(lastArr - 1)
+// My attempt but it gave an array of arrays?????
+   let lastArr = 0
+   lastArr = numArrays.length;
+   const numList = numArrays.slice(lastArr - 1)
 
-
-
+//Joe's feedback
+//const numList = numArrays[numArrays.length -1]
 
 console.log('Exercise 13 result:', numList);
-console.log('Exercise 13 result:', numArrays);
+console.log('Exercise 13 Original Array Not Changed:', numArrays);
 
 /*
 Exercise 14: Accessing within nested arrays
@@ -261,6 +259,9 @@ Complete Exercise 14 in the space below:
 const arr1 = numArrays.map(numArray => numArray[1]);
 console.log(arr1)
 const num = arr1.slice(2, 3)
+
+//A better solution would be
+// const num = numArrays[2][1];
 
 console.log('Exercise 14 result:', num);
 
